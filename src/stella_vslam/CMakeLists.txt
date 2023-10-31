@@ -7,7 +7,7 @@ set(json_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/3rd/json/include)
 set(tinycolormap_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/3rd/tinycolormap/include)
 
 # sqlite3
-find_package(sqlite3 REQUIRED)
+find_package(unofficial-sqlite3 CONFIG REQUIRED)
 
 # g2o
 find_package(g2o REQUIRED
@@ -189,7 +189,6 @@ target_link_libraries(${PROJECT_NAME}
                       OpenMP::OpenMP_CXX
                       Eigen3::Eigen
                       yaml-cpp
-                      ${SQLite3_LIBRARIES}
                       opencv_core
                       opencv_features2d
                       opencv_calib3d
@@ -209,6 +208,7 @@ target_link_libraries(${PROJECT_NAME}
                       "$<$<BOOL:${spdlog_FOUND}>:spdlog::spdlog>"
                       PRIVATE
                       ${LAPACK_LIBRARIES})
+target_link_libraries(main PRIVATE unofficial::sqlite3::sqlite3)
 
 # ----- Install configuration -----
 
