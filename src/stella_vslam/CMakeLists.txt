@@ -7,7 +7,7 @@ set(json_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/3rd/json/include)
 set(tinycolormap_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/3rd/tinycolormap/include)
 
 # sqlite3
-find_package(SQLite3 REQUIRED)
+find_package(sqlite3 REQUIRED)
 
 # g2o
 find_package(g2o REQUIRED
