@@ -7,6 +7,7 @@ set(json_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/3rd/json/include)
 set(tinycolormap_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/3rd/tinycolormap/include)
 
 # sqlite3
+set(CMAKE_FIND_DEBUG_MODE TRUE)
 find_package(unofficial-sqlite3 CONFIG REQUIRED)
 
 # g2o
