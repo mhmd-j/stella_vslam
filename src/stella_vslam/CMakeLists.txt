@@ -8,7 +8,7 @@ set(tinycolormap_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/3rd/tinycolormap/include)
 
 # sqlite3
 set(CMAKE_FIND_DEBUG_MODE TRUE)
-find_package(unofficial-sqlite3 CONFIG REQUIRED)
+find_package(SQLite3 CONFIG REQUIRED)
 
 # g2o
 find_package(g2o REQUIRED
